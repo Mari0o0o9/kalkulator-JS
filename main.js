@@ -34,20 +34,20 @@ function wynik() {
         if(event.key === 'Enter') {
             let liczenie = math.evaluate(wynik.value)
     
-            historia.style.display = 'flex'
+            historia.style.display = `flex`
             historia.innerHTML += `<p>${wynik.value} = ${liczenie}`
     
-            wynik.value = eval(wynik.value)
+            wynik.value = math.evaluate(wynik.value)
         }
     })
 
     dzialanie.addEventListener('click', ()=> {
         let liczenie = math.evaluate(wynik.value)
 
-        historia.style.display = 'flex'
+        historia.style.display = `flex`
         historia.innerHTML += `<p>${wynik.value} = ${liczenie}`
 
-        wynik.value = eval(wynik.value)
+        wynik.value = math.evaluate(wynik.value)
     })
 }
 
