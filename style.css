@@ -1,0 +1,105 @@
+body {
+    background-color: grey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+    width: 350px;
+}
+main {
+    height: 80vh;
+    text-align: center;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
+    margin: 20px;
+}
+#ekran {
+    margin: 5px;
+    height: 10vh;
+    width: 100%;
+    font-size: 30px;
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+#ekran input {
+    color: black;
+    text-align: right;
+    font-size: 30px;
+    height: 70%;
+    width: 100%;
+    background: greenyellow;
+    border-radius: 5px;
+    border: solid black 2px;
+    margin: 10px;
+}
+#panel {
+    background: transparent;
+    margin: 5px;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.przyciski {
+    cursor: pointer;
+    background-color: azure;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bolder;
+    transition: 0.8s;
+
+}
+.przyciski:active {
+    position: relative;
+	top: 1px;
+}
+.narzedzia {
+    cursor: pointer;
+    background-color: azure;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bolder;
+    transition: 0.8s;
+}
+.narzedzia:active {
+    position: relative;
+	top: 1px;
+}
+body div {
+    margin: 10px;
+}
+#history {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+}
+#dzialania {
+    display: none;
+    flex-direction: column;
+    border: solid 2px black;
+    border-radius: 5px;
+    color: white;
+    overflow: auto;
+    height: 10vh;
+}
+p {
+    margin: 3px;
+    padding: 3px;
+}

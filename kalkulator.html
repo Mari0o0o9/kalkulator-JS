@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Kalkulator</title>
+</head>
+<body>
+    <main>
+        <div id="kalkulator">
+            <div id="ekran">
+                <input type="text" id="wynik">
+                <div class="narzedzia" id="usun">
+                    <span class="material-symbols-outlined">
+                        backspace
+                    </span>
+                </div>
+            </div>
+            <div id="panel">
+                <div class="narzedzia" id="usunWszystko">C</div>
+                <div class="przyciski" data-cyfra="()">( )</div>
+                <div class="przyciski" data-cyfra="%">%</div>
+                <div class="przyciski" data-cyfra="/">/</div>
+                <div class="przyciski" data-cyfra="7">7</div>
+                <div class="przyciski" data-cyfra="8">8</div>
+                <div class="przyciski" data-cyfra="9">9</div>
+                <div class="przyciski" data-cyfra="*">*</div>
+                <div class="przyciski" data-cyfra="4">4</div>
+                <div class="przyciski" data-cyfra="5">5</div>
+                <div class="przyciski" data-cyfra="6">6</div>
+                <div class="przyciski" data-cyfra="-">-</div>
+                <div class="przyciski" data-cyfra="1">1</div>
+                <div class="przyciski" data-cyfra="2">2</div>
+                <div class="przyciski" data-cyfra="3">3</div>
+                <div class="przyciski" data-cyfra="+">+</div>
+                <div class="przyciski" data-cyfra="(-">+/-</div>
+                <div class="przyciski" data-cyfra="0">0</div>
+                <div class="przyciski" data-cyfra="0." id="kropka">.</div>
+                <!-- tutaj pomoc ze zmiana kropki na 0. jezeli nie ma nic na poczatku-->
+                <div class="narzedzia" id="dzialanie">=</div>
+            </div>
+        </div>
+    </main>
+    <div id="history">
+        Historia działań
+        <span class="material-symbols-outlined">
+            history
+        </span>
+    </div>
+    <div id="dzialania"></div>
+    <script src="./main.js"></script>
+</body>
+</html>
