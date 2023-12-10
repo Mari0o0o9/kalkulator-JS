@@ -5,15 +5,7 @@ function liczby() {
     przyciski.forEach(element => {
         element.addEventListener('click', index => {
             wynik.value += index.currentTarget.getAttribute('data-cyfra')
-            console.log(wynik.value.length)
         })
-        let kropka = document.getElementById('kropka')
-        if(wynik.value.length > -1) {
-            kropka.dataset.cyfra = '.'
-        }
-        if(wynik.value == "") {
-            kropka.dataset.cyfra = '0.'
-        }
     })
 }
 
@@ -40,9 +32,9 @@ function wynik() {
 
     document.addEventListener('keydown', event => {
         if(event.key === 'Enter') {
-            let liczenie = eval(wynik.value)
+            let liczenie = math.evaluate(wynik.value)
     
-            historia.style.display = `flex`
+            historia.style.display = 'flex'
             historia.innerHTML += `<p>${wynik.value} = ${liczenie}`
     
             wynik.value = eval(wynik.value)
@@ -50,9 +42,9 @@ function wynik() {
     })
 
     dzialanie.addEventListener('click', ()=> {
-        let liczenie = eval(wynik.value)
+        let liczenie = math.evaluate(wynik.value)
 
-        historia.style.display = `flex`
+        historia.style.display = 'flex'
         historia.innerHTML += `<p>${wynik.value} = ${liczenie}`
 
         wynik.value = eval(wynik.value)
