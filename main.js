@@ -1,7 +1,8 @@
 function liczby() {
     var wynik = document.getElementById('wynik')
     var przyciski = document.querySelectorAll('.przyciski')
-    
+    var kropka = document.getElementById('kropka')
+
     przyciski.forEach(element => {
         element.addEventListener('click', index => {
             wynik.value += index.currentTarget.getAttribute('data-cyfra')
