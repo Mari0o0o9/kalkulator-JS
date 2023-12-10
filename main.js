@@ -4,18 +4,16 @@ function liczby() {
     
     przyciski.forEach(element => {
         element.addEventListener('click', index => {
-            let kropka = document.getElementById('kropka')
-            if(wynik.value.length > -1) {
-                kropka.dataset.cyfra = '.'
-            }
-            if(wynik.value.length < -1) {
-                kropka.dataset.cyfra = '0.'
-            }
-
-
             wynik.value += index.currentTarget.getAttribute('data-cyfra')
             console.log(wynik.value.length)
         })
+        let kropka = document.getElementById('kropka')
+        if(wynik.value.length > -1) {
+            kropka.dataset.cyfra = '.'
+        }
+        if(wynik.value == "") {
+            kropka.dataset.cyfra = '0.'
+        }
     })
 }
 

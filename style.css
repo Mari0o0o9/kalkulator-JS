@@ -6,7 +6,7 @@ body {
     justify-content: center;
 }
 main {
-    width: 350px;
+    width: 400px;
     height: 80vh;
     text-align: center;
     background-color: black;
@@ -40,10 +40,9 @@ main {
     margin: 5px;
     height: 60vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
     align-items: center;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
 }
 .przyciski {
     cursor: pointer;
@@ -57,8 +56,6 @@ main {
     align-items: center;
     font-size: 25px;
     font-weight: bolder;
-    transition: 0.8s;
-
 }
 .przyciski:active {
     position: relative;
