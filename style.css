@@ -100,7 +100,7 @@ body div {
     border-radius: 5px;
     color: white;
     overflow: auto;
-    height: 10vh;
+    max-height: 50vh;
 }
 p {
     margin: 3px;
