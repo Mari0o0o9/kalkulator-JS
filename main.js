@@ -2,11 +2,13 @@ function liczby() {
     var wynik = document.getElementById('wynik')
     var przyciski = document.querySelectorAll('.przyciski')
 
+    
+
     przyciski.forEach(element => {
         element.addEventListener('click', index => {
             wynik.value += index.currentTarget.getAttribute('data-cyfra') 
             console.log(wynik.value)
-
+            console.log(nawiasy(wynik.value));
             nawiasy(wynik.value)
         })
         
@@ -14,14 +16,19 @@ function liczby() {
 }
 
 function nawiasy(input) {
-    var pozycja = input.indexOf('(')
-    var nawiasy = document.getElementById('nawiasy')
-    if (pozycja !== -1) {
-        nawiasy.setAttribute('data-cyfra', ')')
-    } else if (pozycja == -1) {
-        nawiasy.setAttribute('data-cyfra', '(')
-    } 
+    var nawiasyElement = document.getElementById('nawiasy');
+    var lastIndexOfOpen = input.lastIndexOf('(');
+    var lastIndexOfClose = input.lastIndexOf(')');
+    var toBeInserted = (lastIndexOfOpen > lastIndexOfClose) ? ')' : '(';
+
+    if (lastIndexOfOpen === -1 && lastIndexOfClose === -1) {
+        toBeInserted = '(';
+    } else {
+        toBeInserted = (lastIndexOfOpen > lastIndexOfClose) ? ')' : '(';
+    }
+    nawiasyElement.setAttribute('data-cyfra', toBeInserted)
 }
+
 
 
 
