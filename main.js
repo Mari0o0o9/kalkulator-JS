@@ -1,14 +1,31 @@
 function liczby() {
     var wynik = document.getElementById('wynik')
     var przyciski = document.querySelectorAll('.przyciski')
-    var kropka = document.getElementById('kropka')
 
     przyciski.forEach(element => {
         element.addEventListener('click', index => {
-            wynik.value += index.currentTarget.getAttribute('data-cyfra')
+            wynik.value += index.currentTarget.getAttribute('data-cyfra') 
+            console.log(wynik.value)
+
+            nawiasy(wynik.value)
         })
+        
     })
 }
+
+function nawiasy(input) {
+    var pozycja = input.indexOf('(')
+    var nawiasy = document.getElementById('nawiasy')
+    if (pozycja !== -1) {
+        nawiasy.setAttribute('data-cyfra', ')')
+    } else if (pozycja == -1) {
+        nawiasy.setAttribute('data-cyfra', '(')
+    } 
+}
+
+
+
+
 
 function usuwanie() {
     var wynik = document.getElementById('wynik')
@@ -51,6 +68,11 @@ function wynik() {
         wynik.value = math.evaluate(wynik.value)
     })
 }
+
+
+
+
+
 
 liczby();
 usuwanie();
