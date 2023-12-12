@@ -7,8 +7,6 @@ function liczby() {
     przyciski.forEach(element => {
         element.addEventListener('click', index => {
             wynik.value += index.currentTarget.getAttribute('data-cyfra') 
-            console.log(wynik.value)
-            console.log(nawiasy(wynik.value));
             nawiasy(wynik.value)
         })
         
