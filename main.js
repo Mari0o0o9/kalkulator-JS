@@ -58,24 +58,22 @@ function wynik() {
     
             historia.style.display = `flex`
             historia.innerHTML += `<p>${wynik.value} = ${liczenie}`
-    
-            wynik.value = math.evaluate(wynik.value)
+             
+            wynik.placeholder = math.evaluate(wynik.value)
+            wynik.value = ''
         }
     })
 
     dzialanie.addEventListener('click', ()=> {
         let liczenie = math.evaluate(wynik.value)
-
+        
         historia.style.display = `flex`
         historia.innerHTML += `<p>${wynik.value} = ${liczenie}`
-
-        wynik.value = math.evaluate(wynik.value)
+ 
+        wynik.placeholder = math.evaluate(wynik.value)
+        wynik.value = ''
     })
 }
-
-
-
-
 
 
 liczby();
