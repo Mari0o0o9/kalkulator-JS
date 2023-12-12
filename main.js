@@ -2,8 +2,6 @@ function liczby() {
     var wynik = document.getElementById('wynik')
     var przyciski = document.querySelectorAll('.przyciski')
 
-    
-
     przyciski.forEach(element => {
         element.addEventListener('click', index => {
             wynik.value += index.currentTarget.getAttribute('data-cyfra') 
