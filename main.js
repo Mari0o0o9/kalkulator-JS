@@ -17,7 +17,6 @@ function nawiasy(input) {
     var nawiasyElement = document.getElementById('nawiasy');
     var lastIndexOfOpen = input.lastIndexOf('(');
     var lastIndexOfClose = input.lastIndexOf(')');
-    var toBeInserted = (lastIndexOfOpen > lastIndexOfClose) ? ')' : '(';
 
     if (lastIndexOfOpen === -1 && lastIndexOfClose === -1) {
         toBeInserted = '(';
