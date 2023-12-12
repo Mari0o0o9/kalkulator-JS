@@ -43,7 +43,7 @@ function usuwanie() {
 
     var usunWszystko = document.getElementById('usunWszystko')
     usunWszystko.addEventListener('click', ()=> {
-        wynik.value = null
+        wynik.value = ''
     })
 }
 
