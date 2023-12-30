@@ -25,10 +25,6 @@ function nawiasy(input) {
 }
 
 
-
-
-
-
 function usuwanie() {
     var wynik = document.getElementById('wynik')
 
